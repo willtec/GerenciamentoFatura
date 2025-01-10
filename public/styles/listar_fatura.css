@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component classes */
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md flex items-center;
+  }
+
+  .table-header-cell {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+  }
+
+  .table-body-cell {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+  }
+
+  .action-icon {
+    @apply text-lg hover:scale-110 transition-transform;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .btn-pagination {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-pagination:hover:not([disabled]) {
+    background-color: var(--color-hover);
+  }
+
+  .btn-pagination[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .results-info {
+    text-align: center;
+    color: var(--color-secondary);
+    margin-top: 10px;
+  }
+}
+
+/* Responsive table adjustments */
+@media (max-width: 640px) {
+  .responsive-table {
+    @apply block overflow-x-auto;
+  }
+}
